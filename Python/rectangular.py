@@ -10,8 +10,7 @@ else:
     print("The area is : " + str(int(high)*int(width)))
     line = ''
     for i in range(int(high)):
-        for j in range(int(width)):
-            line += "*"
+        line += int(width) * "*" 
         line += "\n"
     print(str(line))
 
