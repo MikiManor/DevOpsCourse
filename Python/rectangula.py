@@ -7,6 +7,7 @@ if int(high) <= 0 or int(width) <= 0:
     print("dimentions cannot be negative or Zero! ")
     exit(2)
 else:
+    print("The area is : " + str(int(high)*int(width)))
     line = ''
     for i in range(int(high)):
         for j in range(int(width)):
