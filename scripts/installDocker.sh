@@ -10,3 +10,4 @@ sudo systemctl status docker
 echo "Docker is installed"
 sudo usermod -aG docker ${USER}
 
+
