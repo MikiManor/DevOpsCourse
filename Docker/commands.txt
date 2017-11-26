@@ -1,0 +1,3 @@
+docker run -d -t -p 8080:8080 -p 50000:50000 repository/configured-jenkins
+docker exec -i -t <id> /bin/bash
+docker commit -m "Jenkins First Config" -a "Miki Manor" c93f68b01607  repository/configured-jenkins
