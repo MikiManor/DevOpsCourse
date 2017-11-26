@@ -10,5 +10,6 @@ while True:
         else:
             print("Empty Queue")
             continue
-    items.append(userInput)
-    print("user {} added".format(userInput))
+    if userInput:
+        items.append(userInput)
+        print("user {} added".format(userInput))
