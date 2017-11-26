@@ -8,3 +8,5 @@ apt-cache policy docker-ce
 sudo apt-get install -y docker-ce
 sudo systemctl status docker
 echo "Docker is installed"
+sudo usermod -aG docker ${USER}
+
