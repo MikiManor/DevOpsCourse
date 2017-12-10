@@ -1,0 +1,31 @@
+- hosts: all
+  become: true
+  tasks:
+  - name : Fetch /etc/passwd file
+    fetch:
+      src: /etc/passwd
+      dest: ~/koko2
+  
+  - name : Check if wget is installed
+    yum:
+      name: "wget"
+      state: installed
+  
+  - name : Check if syslog is enabled
+    service:
+      name: syslog
+      enabled: yes
+    ignore_errors: True
+
+  - name : command
+    command: hostname      
+
+- hosts: ansibleslave1
+  become: true
+  tasks:
+  - name : Check if wget is installed on AnsibleSlave1
+    yum:
+      name: "wget"
+      state: installed
+
+
