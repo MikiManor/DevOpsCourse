@@ -1,3 +1,4 @@
 [awsservers]
-ansibleslave1
-ansibleslave2
+ansibleslave1 alias=foo
+ansibleslave2 alias=bar
+

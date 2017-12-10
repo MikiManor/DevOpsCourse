@@ -1,0 +1,6 @@
+- hosts: awsservers
+  become: true
+  tasks:
+    - name: echo alias for each node
+      debug: msg="Node Alias is {{ ":" }} {{ alias }}"
+
