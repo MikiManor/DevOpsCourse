@@ -1,0 +1,22 @@
+- hosts: [awsservers]
+  become: true
+  tasks:
+    - name: Check if ntp is installed
+      yum:
+        name: "ntp"
+        state: latest
+    
+    - name: Copy ntp conf file to remote
+      copy:
+        src: ntp.conf
+        dest: /etc/ntp.conf
+      notify:
+        - Check if ntpd is started
+
+  handlers:  
+    - name : Check if ntpd is started
+      service:
+        name: ntpd
+        state: started
+      ignore_errors: True
+
